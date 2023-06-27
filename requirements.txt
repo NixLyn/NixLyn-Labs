@@ -1,5 +1,5 @@
 asgiref
-django
+django==3.2.19
 django-htmx
 django-htmx-refresh
 django-quill

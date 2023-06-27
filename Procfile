@@ -1,1 +1,1 @@
-web:gunicorn nixlynlabs.wsgi
+web: gunicorn nixlynlabs.wsgi

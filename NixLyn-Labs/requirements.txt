@@ -1,0 +1,8 @@
+asgiref
+django
+django-htmx
+django-htmx-refresh
+django-quill
+gunicorn
+sqlparse
+whitenoise

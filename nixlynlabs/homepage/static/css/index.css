@@ -166,7 +166,6 @@ h1 {
     height: fit-content; 
     padding: 5px 80vw; 
     background-color: black; 
-    /* linear-gradient(-45deg, #9834eb, #e73c7e, #23a6d5, #23d5ab); ; */ 
     color: white; border-radius: 20px; 
 } 
 
@@ -272,7 +271,6 @@ li {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-/*	background-image: url('../pics/graphene.webp'); */
 	background-repeat: no-repeat;
 	background-size: cover;
 

@@ -26,7 +26,7 @@ IS_HEROKU_APP = "DYNO" in os.environ and not "CI" in os.environ
 SECRET_KEY = 'django-insecure-rpqp21a#r#xauffe7wsqk6_9(e+(erp6e^tzefqi8n45(9)6+t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = False
+DEBUG = False
 
 if IS_HEROKU_APP:
     ALLOWED_HOSTS = ["*"]

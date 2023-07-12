@@ -1,0 +1,8 @@
+.wwd_box {
+    background-image: linear-gradient(to bottom right, rgb(0, 0, 0)(148, 69, 69), #00ff00);
+}
+
+p {
+    color: rgb(0, 0, 0);
+    text-align: center;
+}

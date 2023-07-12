@@ -1,0 +1,238 @@
+/* INIT */
+
+.navbar {
+    width: 100%;
+    height: 10vh;
+    top: 0;
+    padding-top: 0;
+    margin-top: 0;
+    position: absolute;
+    justify-content: space-between;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: top;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 0;
+    align-items: center;
+    padding: 5px 0px;
+    z-index: 12;
+    background-color: transparent;
+
+}
+
+.logo {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    margin-left: 0px;
+    margin-top: 5px;
+    width: 10px;
+    border-radius: 15rem;
+    background-color: transparent;
+    z-index: 22;
+}
+
+.navbar .logo {
+    top: -5px;
+    width: 100px;
+}
+
+/* NAVIGATION */
+li {
+    list-style: none;
+    text-decoration: none;
+}
+
+.login a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: x-large;
+}
+
+.nav-menu ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    align-items: center;
+    margin-left: 0;
+    margin-top: 20px;
+    z-index: 250;
+    right: 20px;
+    gap: 40px;
+}
+
+.nav-link {
+    background-color: rgba(43, 255, 0, 0.726);
+    color: black;
+    text-decoration: none;
+    font-size: large;
+    font-weight: unset;
+    margin: 1px;
+    padding: 5px 5px;
+    border-radius: 0.35rem;
+    transition: 0.6s ease;
+    z-index: 250;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+    z-index: 24;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(255, 255, 255);
+    z-index: 25;
+}
+
+
+/*  MEDIA SIZE QUERY ADAPTATION  */
+    /* CELLPHONE SIZE */
+
+@media
+only screen and (max-device-width: 790px), 
+only screen and (min-device-width: 320),
+only screen and (min-device-pixel-ratio : 1.5){
+        /* NAV_BURGER */
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .navbar div .logo {
+        margin-left: 0px;
+        margin-top: 0px;
+        width: 260px;
+        left: 0px;
+        top: 0px;
+    }
+
+    .navbar {
+        position: fixed;
+        background-image: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-image: none;
+    }
+    /* TOP NAV */
+    .hamburger {
+        left: 300px;
+        right: 0px;
+        margin-top: 25px;
+        display: block;
+        width: 100px;
+        height: auto;
+        margin-right: 35px;
+        position: fixed;
+        z-index:  60;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+        background-color: rgb(255, 255, 255);
+        border-radius: 0.8rem;
+
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(37px) rotate(45deg);
+        background-color: rgba(250, 250, 250, 0.85);
+        border-radius: 0.8rem;
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(7px) rotate(-45deg);
+        background-color: rgba(250, 250, 250, 0.85);
+        border-radius: 0.8rem;
+    }
+
+    .bar:nth-child(1){
+        margin-top: 0px;
+    }
+
+    .bar {
+        border-radius: 1.1rem;
+        display: block;
+        width: 50px;
+        height: 10px;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: none;
+        z-index: 125;
+    }
+
+    .nav-menu{
+        background-image: none;
+        height: 150px;
+        position: relative;
+        left: -100%;
+        top: 100px;
+        border-radius: 2rem;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s ease;
+        background-image: none;
+        background-size: 100vw 30vh;
+        background-repeat: no-repeat;
+        background-position-y: top;
+
+    }
+
+    .nav-menu.active{
+        left: 20px;
+        width: 250px;
+        top:    120px;
+        display: block;
+    }
+
+    .nav-item{
+        width: 130px;
+        margin: 6px 5px;
+    }
+
+    .nav-link{
+        background-image: none;
+        color: aliceblue;
+        display: block;
+        height: 20px;
+        margin-left: 10px;
+        font-size: larger;
+        font-weight: bolder;
+        width: 120px;
+        margin-top: 10px;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .nav-menu ul{
+        position: relative;
+        display: block;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+
+    .how_so {
+        background-color: rgba(10, 240, 209, 0.1);
+        display: block;
+        padding-right: 70px;
+        padding-bottom: 20px;
+
+        background-repeat: no-repeat;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2rem;
+    }
+
+}

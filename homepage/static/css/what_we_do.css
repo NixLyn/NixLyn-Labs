@@ -1,0 +1,167 @@
+.wwd_box {
+    background: rgb(0,255,0);
+    background: linear-gradient(90deg, rgba(0,255,0,1) 0%, rgba(0,240,0,1) 35%, rgba(0,0,0,1) 100%);
+}
+
+p {
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+
+.box_w {
+	position: relative;
+	background-color: #FFFFFF01;
+
+	width: 85vw;
+	left: 0;
+    margin-top: 15px;
+	height: 80vh;
+	border-radius: 20px;
+	display: grid;
+	align-items: center;
+	place-items: center;
+	overflow: hidden;
+	
+}
+
+.box_w::before{
+	content: '';
+	position: relative;
+	width: 500%;
+	height: 520%;
+	top: 100%;
+	left: 0%;
+	
+	background-image: conic-gradient(transparent, transparent,transparent, #90F010FF);
+	animation: rotate 4s linear infinite;
+}
+
+.box_w::after{
+	content: '';
+	position: relative;
+	width: 500%;
+	height: 520%;
+	top: -100%;
+	left: 0%;
+	background-image: conic-gradient(transparent, transparent,transparent, #20F0A0FF);
+	animation: rotate 4s linear infinite;
+	animation-delay: -2s;
+}
+
+.box_w:hover span{
+	background-color: #222222;
+	transition: ease-in-out 2.5s;
+}
+
+.box_w span {
+	
+	position: absolute;
+	inset: 5px;
+	border-radius: 16px;
+	background-color: #303030;
+	z-index: 2;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+    overflow-y: visible;
+
+}
+
+
+
+.what-we-do {
+    width: 70vw;
+    height: 100%;
+    background-color: #23a5d500;
+    display: grid;
+    grid-auto-flow: column;
+    margin-bottom: 10px;
+}
+
+.wwd-card{
+    width: 15vw;
+    padding-top: 50px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 35vh;
+    background-color: #23d5ab;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    overflow-y: hidden;
+    overscroll-behavior-y: contain;
+    z-index: 50;
+
+    
+}
+
+.wwd-card * {
+    top: 0;
+}
+
+.wwd-card:hover {
+    height: fit-content;
+    z-index: 500000;
+
+}
+
+.wwd-card h2{
+    margin-top: -30px;
+    color:rgb(0, 0, 0);
+}
+
+
+
+
+
+
+@media
+only screen and (max-device-width: 480px), 
+only screen and (min-device-width: 320),
+only screen and (min-device-pixel-ratio : 1.5){    
+    .box_w {
+        width: 98vw;
+    }
+    .wwd_box {
+        height: 200vh;
+    }
+
+    .wwd_box div{
+        height: 95%;
+    }
+
+    .what-we-do {
+        width: 90vw;
+        height: 25%;
+        background-color: #23a5d500;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .wwd-card {
+        width: 95%;
+        height: 24%;
+    }
+
+    .header_font_0{
+        height: 25px;
+        margin-bottom: -30px;
+        padding-bottom: -20px;
+    }
+
+    .header_font_0 h1{
+        margin-bottom: -50vh;
+        padding-bottom: -20px;
+    }
+
+
+
+}
+

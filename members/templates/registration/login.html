@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}SIGN-IN{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static '../static/css/spin.css' %}"/>
+
+<section class="main_sect_login" style="display: block;">
+    <div class="box">
+        <span>
+            <h1>
+                Sign-In To NixLyn_Lab
+            </h1>
+            <div class="my-form">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}  
+                    <button class="order_now">Login</button>
+                </form>
+            </div>
+        </span>
+    </div>
+</section>
+{% endblock %}

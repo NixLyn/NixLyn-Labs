@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block title %}My Profile Edit{% endblock %}
+
+{% block content %}
+{% load static %}
+<section style="background-image: url('../../static/pics/green_bg_1.jpg'); background-repeat: no-repeat; background-size: cover;">
+    <h1>
+        Edit NixLyn_Lab Profile
+    </h1>
+  <div class="container">
+
+    <div class="form-group">
+        <form method="POST">
+            {% if user.is_authenticated %}
+                <div>{% csrf_token %}</div>
+                <div >
+                    <label>UPDATE: </label>
+                    <div>
+                        {{ form }}
+                    </div>
+                    <div>
+                        <label>UserColor: </label>
+                        <div>{{ user.postdash.color }}</div>
+                    </div>
+                    <!-- div>
+                        <label>FirstName: </label>
+                        <div>{{ form.first_name }}</div>
+                    </div>
+                    <div>
+                        <label>LastName: </label>
+                        <div>{{ form.last_name }}</div>
+                    </div>
+                    <div>
+                        <label>Activity: </label>
+                        <div>{{ form.is_active }}</div>
+                    </div>
+                    <div>
+                        <label>UserLevel: </label>
+                        <div>SuperUser: {{ form.is_superuser }}</div>
+                    </div>
+                    <div>
+                        <label>Password: </label>
+                        <div>{{ form.password }}</div>
+                    </div -->
+                </div>
+                <div>
+                    <button class="btn btn-primary" >Update</button>
+                </div>
+
+
+            {% else %}
+            <h2>Why are you here...?</h2><h4>Please comeback, when you have logged in, legitim</h4>
+            {% endif %}
+        </form>
+    </div>
+  </div>
+</section>
+
+
+<!-- div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Holy guacamole!</strong> I think that woked?
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<script>
+    function holy_railes(){
+        $('.alert').alert();
+    }
+</script -->
+{% endblock %}

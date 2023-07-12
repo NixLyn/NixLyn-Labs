@@ -1,8 +1,17 @@
-
-
 body { 
-    width: 98vw;
+    width: 100%;
     height: 100%; 
+    padding: 0 0;
+    margin: 0 0;
+
+}
+
+.seg_box_0 {
+
+    width: 100%;
+    height: 100vh; 
+    padding: 0 0;
+    margin: 0 0;
     /*** size ***/ 
     --sz: 7px; 
     /*** Colors ***/ 
@@ -96,6 +105,10 @@ body {
         var(--c0) ; 
 }
 
+.seg_box_1 {
+    background-color: #020202;    
+}
+
 section {
     height: 100vh;
     width: 100%;
@@ -103,9 +116,12 @@ section {
 
 h1 {
     color: rgb(0, 255, 0);
-
     text-align: center;
+    text-decoration: underline;
+}
 
+h2 {
+    text-align: center;
 }
 
 
@@ -266,6 +282,7 @@ li {
 
 
 .main_box_0 {
+    height: 75vh;
     padding-top: 50px;
 	display: flex;
 	flex-direction: column;
@@ -273,7 +290,6 @@ li {
 	align-items: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-
 }
 
 
@@ -330,7 +346,9 @@ li {
 
 	place-items: center;
 	overflow: hidden;
-	
+
+    margin-top: 20vh;
+
 }
 
 .box::before{
@@ -457,37 +475,6 @@ span h1 {
 
 
 
-/* What We Do */
-
-
-
-
-.what-we-do {
-    width: 60vw;
-    height: 100%;
-    background-color: #23a5d500;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.what-we-do div{
-    width: 30% ;
-    padding-top: 50px;
-    height: 35vh;
-    background-color: #23d5ab;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.what-we-do div h2{
-    margin-top: -30px;
-}
-
 
 .box_1 {
 	position: relative;
@@ -546,24 +533,22 @@ span h1 {
 	align-items: center;
 }
 
-
-
-
 @media
 only screen and (max-device-width: 480px), 
 only screen and (min-device-width: 320),
 only screen and (min-device-pixel-ratio : 1.5){    
-
-    .what-we-do {
-        width: 90vw;
-        height: 25%;
-        background-color: #23a5d500;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        margin-bottom: 10px;
+    .login h1 {
+        position: static;
+        font-size: xx-large;
+    }
+    .box_1 {
+        width: 95vw;
+    }
+    .box {
+        width: 95vw;
     }
 
 
 }
+
+

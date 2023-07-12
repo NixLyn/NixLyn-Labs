@@ -26,12 +26,12 @@ IS_HEROKU_APP = "DYNO" in os.environ and not "CI" in os.environ
 SECRET_KEY = 'django-insecure-rpqp21a#r#xauffe7wsqk6_9(e+(erp6e^tzefqi8n45(9)6+t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 if IS_HEROKU_APP:
     ALLOWED_HOSTS = ["*"]
 else:
-    ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = ['127.0.0.1']
 
 
 PORT = int(os.environ.get('PORT', '8000'))
@@ -40,6 +40,9 @@ if not DEBUG:
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
+else:
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'http')
+
 
 SITE_URL = f'https://{ALLOWED_HOSTS[0]}'
 
@@ -54,6 +57,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'homepage',
+    'members',
 ]
 
 MIDDLEWARE = [

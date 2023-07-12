@@ -1,0 +1,11 @@
+<section>
+    <h1>NoticeBoard</h1>
+    <!-- Basic Styles, just for now -->
+    <ul style="background-color: chartreuse; padding: 10px 10px; margin: 10px 10px;">
+        {% for post in object_list %}
+            <li>{{ post.title }}</li>
+            <li>{{ post.author }}</li>
+            <li>{{ post.body }}</li>
+        {% endfor %}
+    </ul>
+</section>

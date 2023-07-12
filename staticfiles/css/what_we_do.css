@@ -1,0 +1,85 @@
+.wwd_box {
+    background: rgb(0,255,0);
+    background: linear-gradient(90deg, rgba(0,255,0,1) 0%, rgba(0,240,0,1) 35%, rgba(0,0,0,1) 100%);
+}
+
+p {
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+/* What We Do */
+
+
+
+
+.what-we-do {
+    width: 60vw;
+    height: 100%;
+    background-color: #23a5d500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.wwd-card{
+    width: 24% ;
+    padding-top: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 35vh;
+    background-color: #23d5ab;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wwd-card h2{
+    margin-top: -30px;
+    color:rgb(0, 0, 0);
+}
+
+
+
+
+
+
+@media
+only screen and (max-device-width: 480px), 
+only screen and (min-device-width: 320),
+only screen and (min-device-pixel-ratio : 1.5){    
+    .wwd_box {
+        height: 300vh;
+    }
+
+    .wwd_box div{
+        height: 95%;
+    }
+
+    .what-we-do {
+        width: 90vw;
+        height: 25%;
+        background-color: #23a5d500;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .wwd-card {
+        width: 95%;
+        height: 24%;
+    }
+
+    .header_font_0{
+        height: 10%;
+    }
+
+
+
+}
+
